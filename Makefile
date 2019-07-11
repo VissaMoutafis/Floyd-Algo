@@ -11,6 +11,6 @@ include ./make.inc
 $(PROGRAM) : clean $(OBJS)
 	$(CC) $(OBJS) $(CFLAGS) -o $(PROGRAM)
 clean :
-	rm -rf $(PROGRAM) $(OBJS)
+	rm -rf $(PROGRAM) *.o
 run : $(PROGRAM)
 	./$(PROGRAM)

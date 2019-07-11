@@ -1,13 +1,17 @@
 #default case that takes place in case the user wouldn't enter a flowar implementation
-#OBJS = flowardp.o
 
 ifeq ($(flowar),rec)
 	OBJS += flowarrec.o
-endif
+else
 
-ifeq ($(flowar),mem)
-	OBJS += flowarmem.o
-endif
-ifeq ($(flowar),dp)
-	OBJS += flowardp.o
+	ifeq ($(flowar),mem)
+		OBJS += flowarmem.o
+	
+	else
+		OBJS += flowardp.o
+		
+		ifeq ($(path),yes)
+		CFLAGS = -DPATH
+		endif
+	endif		
 endif
