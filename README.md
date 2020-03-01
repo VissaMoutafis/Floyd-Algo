@@ -22,5 +22,5 @@ path.
 
 ~$ make run # build and run the program (use the "flowar" string to get the build that you want)
 
-~$ make flowar=dp path=yes: Get not only the shortest path but also the actual path between each of the nodes 
+~$ make flowar=dp path=yes # Get not only the shortest path but also the actual path between each of the nodes 
 ```
